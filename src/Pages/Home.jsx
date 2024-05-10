@@ -15,6 +15,9 @@ const Home = () => {
         // console.log(data.flightOffer);
         setTravelsData(data.flightOffer); //Accessing flightOffer from fetched data and put it in travelsData
         setMessage(data.message); //set the message of data in message
+      })
+      .catch((error) => {
+        alert("Can not fetch data");
       });
   }, []);
   return (
